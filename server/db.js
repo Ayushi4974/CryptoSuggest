@@ -1,12 +1,20 @@
 const mongoose = require('mongoose');
 
+let cachedConnection = null;
+
 const connectDB = async () => {
+    if (cachedConnection) {
+        return cachedConnection;
+    }
+
     try {
         const conn = await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/crypto-design');
         console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
+        cachedConnection = conn;
+        return conn;
     } catch (error) {
-        console.error(`❌ Error: ${error.message}`);
-        process.exit(1);
+        console.error(`❌ MongoDB Connection Error: ${error.message}`);
+        throw error;
     }
 };
 
