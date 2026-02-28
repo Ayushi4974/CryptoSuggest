@@ -1,0 +1,75 @@
+.cta {
+    padding: 80px 0 100px;
+    position: relative;
+}
+
+.cta__card {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(139, 92, 246, 0.08));
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: var(--radius-xl);
+    padding: 80px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.cta__content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta__title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+    line-height: 1.15;
+}
+
+.cta__subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin: 0 auto 36px;
+    line-height: 1.75;
+}
+
+.cta__subtitle strong {
+    color: white;
+}
+
+.cta__actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.cta__perks {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta__perk {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.cta__perk-check {
+    color: var(--accent-green);
+    font-weight: 700;
+}
+
+@media (max-width: 640px) {
+    .cta__card {
+        padding: 48px 20px;
+    }
+}

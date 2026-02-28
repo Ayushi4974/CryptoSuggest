@@ -1,0 +1,177 @@
+.market {
+    padding: 100px 0;
+    position: relative;
+}
+
+.market__header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.market__title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+}
+
+.market__subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Tabs */
+.market__tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.market__tab {
+    padding: 8px 20px;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.market__tab:hover {
+    color: white;
+    border-color: var(--accent-blue);
+}
+
+.market__tab--active {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: white;
+}
+
+/* Table */
+.market__table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+}
+
+.market__table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+.market__table thead th {
+    padding: 16px 16px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.market__row {
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.market__row:hover {
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.market__row td {
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.06);
+    white-space: nowrap;
+}
+
+.market__row:last-child td {
+    border-bottom: none;
+}
+
+.market__rank {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.market__name-cell {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+}
+
+.market__coin-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.market__coin-name {
+    font-weight: 600;
+    color: white;
+    font-size: 0.875rem;
+}
+
+.market__coin-symbol {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.market__price {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+.market__up {
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.market__down {
+    color: var(--accent-red);
+    font-weight: 600;
+}
+
+.market__cap,
+.market__volume {
+    color: var(--text-secondary);
+}
+
+.market__buy-btn {
+    padding: 6px 16px;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+.market__buy-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+.market__footer {
+    text-align: center;
+    margin-top: 32px;
+}

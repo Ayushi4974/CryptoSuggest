@@ -1,0 +1,74 @@
+.ticker {
+    background: rgba(8, 15, 32, 0.9);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.ticker::before,
+.ticker::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.ticker::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+
+.ticker::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-primary), transparent);
+}
+
+.ticker__track {
+    display: flex;
+    gap: 0;
+    width: max-content;
+    animation: ticker 30s linear infinite;
+}
+
+.ticker__track:hover {
+    animation-play-state: paused;
+}
+
+.ticker__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 28px;
+    border-right: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.ticker__symbol {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: white;
+}
+
+.ticker__price {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.ticker__change {
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.ticker__change--up {
+    color: var(--accent-green);
+}
+
+.ticker__change--down {
+    color: var(--accent-red);
+}

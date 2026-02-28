@@ -1,0 +1,215 @@
+.dev-section {
+    padding: 100px 0;
+    background: #f8faff;
+}
+
+.dev-section__inner {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    padding: 80px;
+    border-radius: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.dev-section__inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #f97316, #3b82f6);
+}
+
+.dev-section__content {
+    flex: 1;
+}
+
+.dev-section__badge {
+    display: inline-block;
+    background: #ffedd5;
+    color: #f97316;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.dev-section__title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.dev-section__desc {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.dev-section__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+}
+
+.dev-section__list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.dev-section__check {
+    width: 20px;
+    height: 20px;
+    background: #ffedd5;
+    color: #f97316;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dev-section__btn {
+    background: linear-gradient(135deg, #111827, #374151);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 16px;
+    font-weight: 800;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dev-section__btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+}
+
+.dev-section__btn:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #1f2937, #4b5563);
+}
+
+.dev-section__btn:hover::after {
+    left: 150%;
+}
+
+/* Visual Stats Card */
+.dev-section__visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.dev-card {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 32px;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(241, 245, 249, 1);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dev-card:hover {
+    transform: translateY(-15px) rotate(-1deg);
+    box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.2);
+}
+
+.dev-card:hover .dev-card__icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.dev-card__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dev-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dev-card__label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+}
+
+.dev-card__value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.dev-card__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dev-card__icon--green {
+    background: #dcfce7;
+    color: #22c55e;
+}
+
+.dev-card__icon--blue {
+    background: #dbeafe;
+    color: #3b82f6;
+}
+
+.dev-card__divider {
+    height: 1px;
+    background: #f1f5f9;
+    margin: 24px 0;
+}
+
+@media (max-width: 900px) {
+    .dev-section__inner {
+        flex-direction: column;
+        padding: 40px;
+        gap: 40px;
+    }
+
+    .dev-section__title {
+        font-size: 1.8rem;
+    }
+
+    .dev-section__visual {
+        max-width: 100%;
+    }
+}
